@@ -120,16 +120,56 @@ void MainWindow::on_startSample_clicked()
        emit startSamTimer(false);
        isSampling=false;
        ui->startSample->setText("开始采集");
+
+       ui->frame_3->setEnabled(true);
+       ui->groupBox->setEnabled(true);
+       ui->groupBox_2->setEnabled(true);
+       ui->writeconfig->setEnabled(true);
+
     }
     else
     {
        emit startSamTimer(true);
         isSampling=true;
         ui->startSample->setText("停止采集");
+
+
+        ui->frame_3->setEnabled(false);
+        ui->groupBox->setEnabled(false);
+        ui->groupBox_2->setEnabled(false);
+        ui->writeconfig->setEnabled(false);
+
     }
 
 }
 
+void MainWindow::on_pushButton_fileselect_clicked()
+{
+    QString srcDirPath = QFileDialog::getExistingDirectory(
+
+    this, "choose src Directory",
+
+    "/");
+
+    if (srcDirPath.isEmpty())
+
+    {
+
+    return;
+
+    }
+
+    else
+
+    {
+
+     ui->COCN_filepath->setText( srcDirPath += "/");
+
+   ;
+
+    }
+
+}
 
 //void MainWindow::on_setConfig_clicked()
 //{
@@ -177,10 +217,7 @@ void MainWindow::on_startSample_clicked()
 //}
 
 
-void MainWindow::on_pushButton_fileselect_clicked()
-{
 
-}
 
 
 void MainWindow::on_writeconfig_clicked()

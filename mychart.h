@@ -26,6 +26,8 @@ public:
     void hideGraph();
 private slots:
     void on_writeconfig_clicked();
+ //  void on_pushButton_fileselect_clicked();
+
 
 private:
     QVector<double> COCNt,COCNd1,COCNd2;

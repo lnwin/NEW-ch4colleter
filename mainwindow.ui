@@ -218,7 +218,7 @@
           <widget class="QLabel" name="qiya">
            <property name="geometry">
             <rect>
-             <x>80</x>
+             <x>90</x>
              <y>70</y>
              <width>80</width>
              <height>21</height>
@@ -284,7 +284,7 @@
           <widget class="QLabel" name="nongdu_1">
            <property name="geometry">
             <rect>
-             <x>90</x>
+             <x>100</x>
              <y>100</y>
              <width>171</width>
              <height>21</height>
@@ -317,7 +317,7 @@
           <widget class="QLabel" name="nongdu_2">
            <property name="geometry">
             <rect>
-             <x>90</x>
+             <x>100</x>
              <y>130</y>
              <width>161</width>
              <height>21</height>

@@ -245,3 +245,5 @@ void mychart::on_writeconfig_clicked()
 
 }
 
+
+

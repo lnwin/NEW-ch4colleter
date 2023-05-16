@@ -15,12 +15,16 @@ void filesave::savecocnData(QVector <double>cocn,QString fp)
      filename=COCNpATH+filename;
      QFile datafile(filename);
      QTextStream stream(&datafile);
+     QDir *path =new QDir;
 
-     qDebug()<<"save    cocn======="<<cocn;
+     if(!path->exists(COCNpATH))
+     {
+          path->mkdir(COCNpATH);
+     }
+
      if(!datafile.exists())
      {
-        QDir *path =new QDir;
-        path->mkdir(COCNpATH);
+
         datafile.open(QIODevice::WriteOnly | QIODevice::Text);
 
             stream<<time.toString("hh:mm:ss")<<"\t"<<cocn[1] <<"\t"<<cocn[2]<<"\n";
