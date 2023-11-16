@@ -43,6 +43,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->myOriginChart, SIGNAL(mouseMove(QMouseEvent*)), this, SLOT(myMoveEvent(QMouseEvent*)));
 
+    autoRun();
+
 }
 
 void MainWindow::myMoveEvent(QMouseEvent *event) {
@@ -171,52 +173,16 @@ void MainWindow::on_pushButton_fileselect_clicked()
 
 }
 
-//void MainWindow::on_setConfig_clicked()
-//{
-//    bool ok;
-//     QString text = QInputDialog::getText(this, tr("后台管理"),tr("请输入配置密码"), QLineEdit::Password,0, &ok);
-//     if (ok && !text.isEmpty())
-//     {
-//         if(text=="1023")
-//         {
-//            if(setLocked)
-//            {
-//                ui->frame->setEnabled(true);
-//                setLocked=false;
-//                ui->setConfig->setText("关闭配置参数锁");
-//            }
-//            else
-//            {
-//                ui->frame->setEnabled(false);
-//                ui->setConfig->setText("开启配置参数锁");
-//                setLocked=true;
-//            }
 
 
-//         }
-//         else
-//         {
-//            QMessageBox ms;
-//            ms.setIcon(QMessageBox::Icon::Warning);
-//            ms.setWindowIcon(QIcon(":/image/image/001.jpg"));
-//            ms.setWindowTitle("注意");
-//            ms.setText("密码错误！");
-//            ms.exec();
-
-//         }
-//     }
-//     else
-//     {
-//         QMessageBox ms;
-//         ms.setIcon(QMessageBox::Icon::Warning);
-//         ms.setWindowIcon(QIcon(":/image/image/001.jpg"));
-//         ms.setWindowTitle("注意");
-//         ms.setText("密码不能为空！");
-//         ms.exec();
-//     }
-//}
-
-
+void MainWindow::autoRun()
+{
+   on_connectDev_clicked();
+   Sleep(1000);
+   on_writeconfig_clicked();
+   Sleep(1000);
+   on_startSample_clicked();
+};
 
 
 

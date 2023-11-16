@@ -459,6 +459,12 @@
            <property name="text">
             <string>Max_Min</string>
            </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="tristate">
+            <bool>false</bool>
+           </property>
           </widget>
          </widget>
         </item>
@@ -502,7 +508,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>170/190</string>
+            <string>300/350</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_10">
@@ -541,7 +547,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>160/180</string>
+            <string>300/325</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_8">
@@ -632,7 +638,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>180/200</string>
+            <string>325/335</string>
            </property>
           </widget>
           <widget class="QCheckBox" name="F_1_MAX2_selected">
@@ -738,7 +744,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>280/310</string>
+            <string>400/450</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_11">
@@ -777,7 +783,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>260/290</string>
+            <string>380/430</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_13">
@@ -855,7 +861,7 @@
             </rect>
            </property>
            <property name="text">
-            <string>300/330</string>
+            <string>430/480</string>
            </property>
           </widget>
           <widget class="QLabel" name="label_20">

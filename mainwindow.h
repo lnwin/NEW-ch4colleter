@@ -53,5 +53,6 @@ private:
 
     bool checkSampleFlag();
 
+    void autoRun();
 };
 #endif // MAINWINDOW_H
