@@ -192,7 +192,7 @@ void myDateCard::myStartSample()
                 myADCCfg.dwCycleCnt += cycles;
                 float akc=25.5677*realVol_2-23.43824;
                 emit sendbar2main(akc);
-
+                 emit savePressData(akc,filepath);
                  //  qDebug()<<originBuffer_1.length();
 
                    if(ifcout&&ifMAX_MIN)
