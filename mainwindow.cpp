@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent)
 
 
     connect(mpDataCard,SIGNAL(saveCOCN(QVector <double>,QString)),myfilesave,SLOT (savecocnData(QVector <double>,QString)));
+     connect(mpDataCard,SIGNAL( savePressData(float,QString)),myfilesave,SLOT (savemyPressData(float,QString)));
     connect(mpDataCard,SIGNAL(saveoprigin(QVector <double>,QVector <double>,QString)),myfilesave,SLOT (saveORIGNData(QVector <double>,QVector <double>,QString)));
     connect(mpDataCard,SIGNAL( sendbar2main(float)),this,SLOT (receiveBar(float)));
 
@@ -43,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     connect(ui->myOriginChart, SIGNAL(mouseMove(QMouseEvent*)), this, SLOT(myMoveEvent(QMouseEvent*)));
 
-    autoRun();
+   autoRun();
 
 }
 

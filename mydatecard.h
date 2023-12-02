@@ -42,7 +42,7 @@ signals:
 
     void saveCOCN(QVector <double>,QString);
     void saveoprigin(QVector <double>,QVector <double>,QString);
-
+    void savePressData(float,QString);
     void connectsuccess(bool);
 
 private:

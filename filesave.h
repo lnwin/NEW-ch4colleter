@@ -16,6 +16,7 @@ public:
 public slots:
     void savecocnData(QVector <double>,QString);
     void saveORIGNData(QVector <double>,QVector <double>,QString);
+    void savemyPressData(float,QString);
 };
 
 #endif // FILESAVE_H
